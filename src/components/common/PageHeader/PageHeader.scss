@@ -1,0 +1,21 @@
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 22px 75px;
+  background-image: linear-gradient(-180deg, #180202 0%, #000 100%);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 36px;
+  color: #dfcf77;
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+}

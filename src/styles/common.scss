@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 #root {
   display: flex;
   flex-direction: column;
@@ -6,13 +8,16 @@
 
 html,
 body {
+  @include amatic;
+
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: 0;
   min-width: 280px;
   padding: 0;
-  font-weight: 400;
+  font-size: 19px;
+  line-height: 23px;
   color: #1b1a17;
   background-color: var(--lightBeige);
 }

@@ -1,15 +1,18 @@
 import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
-import promise from 'redux-promise-middleware';
-import {setupReducer} from 'features/setup';
+import thunk from 'redux-thunk';
+import {userReducer} from 'features/user';
+import createApi from 'services/api';
 import withProvider from './withProvider';
+
+const api = createApi();
 
 /**
  * Create root reducer, containing
  * all features of the application
  */
 const rootReducer = combineReducers({
-  setup: setupReducer,
+  USER: userReducer,
 });
 
 /**
@@ -24,7 +27,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 /** Create Redux store with root reducer and middleware included */
 export const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(promise))
+  composeEnhancers(applyMiddleware(thunk.withExtraArgument(api)))
 );
 
 /**
