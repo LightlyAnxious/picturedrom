@@ -1,13 +1,16 @@
-import {INCREMENT_COUNTER} from './actionTypes';
+import actionTypes from './actionTypes';
 
 const initialState = {
-  value: 0,
+  setup: null,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT_COUNTER:
-      return {...state, value: action.value};
+    case actionTypes.LOAD_FILMS:
+      return {
+        ...state,
+        films: action.payload,
+      };
 
     default:
       return state;

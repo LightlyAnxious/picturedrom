@@ -18,6 +18,7 @@
     "husky": "^4.3.8",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "lint-staged": "^10.5.3",
+    "node-sass": "^4.14.1",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -29,15 +30,13 @@
     "redux-mock-store": "^1.5.4",
     "redux-promise-middleware": "^6.1.2",
     "stylelint": "^13.9.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0"
+    "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
-    "prestart": "node ./prepare.js",
     "fix:js": "npx eslint --fix ./src/",
     "lint:js": "npx eslint ./src/",
     "lint:style": "npx stylelint ./src/",
@@ -57,5 +56,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "stylelint-config-hudochenkov": "^5.0.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0"
   }
 }
