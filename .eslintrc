@@ -9,6 +9,8 @@
   "rules": {
     // Allow jsx tags inside .js files.
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    // Disabling defaultProps insted of es6 destructuring
+    "react/require-default-props": "off",
     // Disable props spreading (<App {...props} />) warning.
     "react/jsx-props-no-spreading": 0,
     // Throw warning instead of error when using array index as a key.
@@ -61,7 +63,9 @@
     {
       "files": [ "./*.js"],
       "rules": {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true,
+        "optionalDependencies": false, "peerDependencies": false}],
+        "react/require-default-props": "off",
         "global-require": 0
       }
     },
