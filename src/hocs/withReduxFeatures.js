@@ -1,18 +1,21 @@
 import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
-import {userReducer} from 'features/user';
-import createApi from 'services/api';
+import {redirectToRoute, userReducer} from 'features/user';
+import {cinemaReducer} from 'features/cinema';
+import {dataReducer} from 'features/data';
+import {setupApiInterceptors, createApi} from 'services';
 import withProvider from './withProvider';
 
 const api = createApi();
-
 /**
  * Create root reducer, containing
  * all features of the application
  */
 const rootReducer = combineReducers({
   USER: userReducer,
+  CINEMA: cinemaReducer,
+  DATA: dataReducer,
 });
 
 /**
@@ -29,6 +32,10 @@ export const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(thunk.withExtraArgument(api)))
 );
+
+/**  Creates axios interceptors
+ */
+setupApiInterceptors(api, store.dispatch(redirectToRoute('/')));
 
 /**
  * Create HOC, which wraps given Component with Redux Provider

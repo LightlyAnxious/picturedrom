@@ -1,7 +1,11 @@
+@import 'styles/mixins.scss';
+
+.logo {
+  @include amatic-b;
+}
+
 .logo__link {
-  // border: 1px solid rgba(223, 207, 119, 0.36);
-  // border-radius: 8px;
-  width: 115px;
+  width: 150px;
   height: 54px;
   color: var(--titleColor);
   display: -webkit-box;
@@ -10,6 +14,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s, border-color 0.2s;

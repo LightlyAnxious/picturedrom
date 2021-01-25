@@ -1,6 +1,7 @@
+/* eslint-disable */
 export default function validateReview(values) {
-  let validationErrors = {
-    invalidText: true
+  const validationErrors = {
+    invalidText: true,
   };
   const {review} = values;
 
