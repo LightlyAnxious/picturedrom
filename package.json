@@ -32,6 +32,7 @@
     "redux": "^4.0.5",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "screenfull": "^5.1.0",
     "stylelint": "^13.9.0",
     "stylelint-config-standard": "^20.0.0"
@@ -44,6 +45,7 @@
     "fix:js": "npx eslint --fix ./src/",
     "lint:js": "npx eslint ./src/",
     "lint:style": "npx stylelint ./src/",
+    "lint:all": "npx eslint ./src/ && npx stylelint ./src/**/*.scss --syntax scss",
     "fix:style": "npx stylelint ./src/ --fix"
   },
   "eslintConfig": {

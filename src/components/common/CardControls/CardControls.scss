@@ -1,0 +1,40 @@
+@import 'styles/mixins.scss';
+
+.btn {
+  @include school;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 128px;
+  vertical-align: top;
+  padding: 13px 15px;
+  text-decoration: none;
+  border: 0;
+  background: rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  border-radius: 8px;
+  color: #eee5b5;
+  font-size: 20px;
+  line-height: 20px;
+  transition: 0.2s background-color, 0.2s transform;
+  will-change: transform;
+
+  &--play {
+    fill: var(--subtitleColor);
+
+    & svg {
+      width: 30px;
+      height: 25px;
+    }
+  }
+}
+.btn:hover {
+  background: rgba(0, 0, 0, 0.51);
+  transform: scale(1.1);
+}
+.btn img,
+.btn svg {
+  vertical-align: top;
+  margin-right: 9px;
+}

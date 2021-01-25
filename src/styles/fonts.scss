@@ -17,3 +17,13 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Schoolbell';
+  src: local('Schoolbell'),
+    url('../fonts/schoolbell-v11-latin-regular.woff2') format('woff2'),
+    url('../fonts/schoolbell-v11-latin-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

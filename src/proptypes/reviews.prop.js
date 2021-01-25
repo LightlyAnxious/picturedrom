@@ -5,6 +5,6 @@ export default PropTypes.arrayOf(
     name: PropTypes.string,
     review: PropTypes.string,
     rating: PropTypes.num,
-    date: PropTypes.string
+    date: PropTypes.string,
   })
 );

@@ -13,9 +13,9 @@ export default PropTypes.shape({
   rating: PropTypes.number,
   scoresCount: PropTypes.number,
   director: PropTypes.string,
-  starring: PropTypes.array,
+  starring: PropTypes.arrayOf(PropTypes.string),
   runTime: PropTypes.number,
   genre: PropTypes.string,
   released: PropTypes.number,
-  isFavorite: PropTypes.bool
+  isFavorite: PropTypes.bool,
 });
