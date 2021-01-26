@@ -17,7 +17,7 @@ const getGenres = films => ({
   payload: getUniqueGenres(films).slice(0, MAX_GENRES),
 });
 
-const selectGenre = genre => ({
+const chooseGenre = genre => ({
   type: ActionType.SELECT_GENRE,
   payload: genre,
 });
@@ -43,7 +43,7 @@ const setVisibleFilms = count => ({
 
 export {
   getGenres,
-  selectGenre,
+  chooseGenre,
   resetGenres,
   loadFavorite,
   loadComments,

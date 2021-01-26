@@ -1,4 +1,5 @@
 @import 'styles/mixins.scss';
+@import 'styles/screens.scss';
 
 .logo {
   @include amatic-b;
@@ -43,5 +44,17 @@
 
   &:hover[href] {
     fill: var(--titleHoverColor);
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .logo__link {
+    width: 120px;
+    height: 40px;
+    font-size: 23px;
+  }
+
+  .logo__picture {
+    width: 32px;
   }
 }

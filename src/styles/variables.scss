@@ -1,7 +1,16 @@
+@import 'styles/screens.scss';
+
 :root {
   --titleSize: 23px;
   --titleColor: #d9cd8d;
   --titleHoverColor: #54503e;
+  --subtitleSize: 18px;
   --subtitleColor: #eee5b5;
   --medTransition: 0.25s;
+}
+
+@media (max-width: $small-mobile-width) {
+  :root {
+    --subtitleSize: 16px;
+  }
 }

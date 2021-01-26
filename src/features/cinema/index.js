@@ -1,7 +1,7 @@
 export {default as cinemaReducer} from './cinemaReducer';
 export {
   getGenres,
-  selectGenre,
+  chooseGenre,
   resetGenres,
   loadFavorite,
   loadComments,
@@ -21,4 +21,5 @@ export {
   selectCurrentFilm,
   selectGenres,
   selectFavorite,
+  selectVisible,
 } from './selectors';

@@ -1,4 +1,5 @@
 @import 'styles/mixins.scss';
+@import 'styles/screens.scss';
 
 .movie-card {
   @include school;
@@ -58,7 +59,7 @@
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 75px;
+  padding: 0;
 }
 
 .movie-card__info {
@@ -215,4 +216,71 @@
 
 .movie-card__header {
   position: relative;
+}
+
+@media (max-width: $mobile-width) {
+  .movie-card__info {
+    justify-content: space-between;
+  }
+
+  .movie-card__poster {
+    margin-right: 0;
+  }
+
+  .movie-card__desc {
+    flex-grow: unset;
+    width: 55%;
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .movie-card {
+    padding-bottom: 30px;
+  }
+
+  .movie-card__head {
+    margin-bottom: 0;
+  }
+
+  .movie-card__info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card__poster {
+    width: 180px;
+    height: 270px;
+    margin-bottom: 25px;
+  }
+
+  .movie-card__desc {
+    width: 100%;
+    text-align: center;
+  }
+
+  .movie-card__title {
+    font-size: 30px;
+  }
+
+  .movie-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .movie-card__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .movie-card__button {
+    margin-right: 0;
+  }
 }
