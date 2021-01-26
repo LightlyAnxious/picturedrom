@@ -28,19 +28,13 @@ const CardControls = props => {
         onClick={() => onPlayRedirect(id)}
         className="btn btn--play movie-card__button"
         type="button">
-        {/* <svg viewBox="0 0 19 19" width="19" height="19">
-          <use xlinkHref="#play-s" />
-        </svg> */}
-        <PlayIcon style={{width: '30', height: '25'}} />
+        <PlayIcon />
         <span>Play</span>
       </button>
       <button
         onClick={onMyListClick}
         className="btn btn--list movie-card__button"
         type="button">
-        {/* <svg viewBox="0 0 19 20" width="19" height="20">
-          <use xlinkHref={isFavorite ? '#in-list' : '#add'} />
-        </svg> */}
         {!isFavorite ? <AddIcon /> : <InListIcon />}
         <span>My list</span>
       </button>

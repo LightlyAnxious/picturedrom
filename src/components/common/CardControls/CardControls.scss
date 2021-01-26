@@ -1,4 +1,5 @@
 @import 'styles/mixins.scss';
+@import 'styles/screens.scss';
 
 .btn {
   @include school;
@@ -37,4 +38,17 @@
 .btn svg {
   vertical-align: top;
   margin-right: 9px;
+}
+
+@media (max-width: $small-mobile-width) {
+  .btn {
+    padding: 10px 13px;
+    font-size: var(--subtitleSize);
+
+    &--play {
+      & svg {
+        width: 25px;
+      }
+    }
+  }
 }

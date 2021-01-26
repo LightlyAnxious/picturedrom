@@ -1,3 +1,5 @@
+@import 'styles/screens.scss';
+
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,7 +8,7 @@
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 22px 75px;
+  padding: 22px 0;
 }
 
 .page-title {
@@ -17,4 +19,10 @@
   font-weight: 300;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: $mobile-width) {
+  .page-header {
+    padding: 15px 0;
+  }
 }
