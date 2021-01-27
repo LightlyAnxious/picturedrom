@@ -1,0 +1,54 @@
+@import 'styles/mixins.scss';
+
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  min-width: 180px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--controlColor);
+  transition: all 300ms ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  content: '';
+  top: 14px;
+  right: 15px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  fill: var(--titleColor);
+}
+
+.expanded {
+  & .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.list {
+  @include list-reset;
+
+  width: 100%;
+  transition: max-height 250ms ease-in-out;
+}
+
+.item {
+  text-align: center;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-align: center;
+}
+
+.current {
+  color: inherit;
+}

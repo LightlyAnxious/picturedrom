@@ -7,6 +7,9 @@
   --subtitleSize: 18px;
   --subtitleColor: #eee5b5;
   --medTransition: 0.25s;
+  --controlColor: rgba(217, 202, 116, 0.2);
+  --controlHoverColor: rgba(217, 202, 116, 0.5);
+  --mediumAnimation: 250ms;
 }
 
 @media (max-width: $small-mobile-width) {

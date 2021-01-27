@@ -7,6 +7,7 @@
     "prettier/react"
   ],
   "rules": {
+    "no-debugger": "warn",
     // Allow jsx tags inside .js files.
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
     // Disabling defaultProps insted of es6 destructuring

@@ -1,7 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector, shallowEqual} from 'react-redux';
 import classNames from 'classnames';
-import {Link} from 'react-router-dom';
 
 import {
   chooseGenre,
@@ -9,12 +8,18 @@ import {
   selectGenres,
   selectActiveGenre,
 } from 'features/cinema';
-import {DEFAULT_GENRE} from 'utils/const';
+import {useWindowSize} from 'hooks';
+import {DEFAULT_GENRE, WindowSize} from 'utils/const';
+
+import Select from 'components/shared/Select/Select';
+import GenreItem from './components/GenreItem';
 
 const GenresList = () => {
   const activeGenre = useSelector(selectActiveGenre, shallowEqual);
   const genres = useSelector(selectGenres, shallowEqual);
   const dispatch = useDispatch();
+  const currentWindowSize = useWindowSize();
+  const isMobile = currentWindowSize.width <= WindowSize.MOBILE;
 
   const handleClick = genre => {
     if (genre === DEFAULT_GENRE) {
@@ -24,7 +29,7 @@ const GenresList = () => {
     }
   };
 
-  return (
+  const renderGenreList = () => (
     <ul className="catalog__genres-list">
       {genres.map((genre, i) => {
         const classes = classNames('catalog__genres-item', {
@@ -33,18 +38,21 @@ const GenresList = () => {
 
         return (
           <li className={classes} key={`${genre}`}>
-            <Link
-              to="/"
-              href="#"
-              onClick={() => handleClick(genre)}
-              className="catalog__genres-link">
-              {genre}
-            </Link>
+            <GenreItem onClick={() => handleClick(genre)}>{genre}</GenreItem>
           </li>
         );
       })}
     </ul>
   );
+
+  const renderGenresListOrSelect = () =>
+    !isMobile ? (
+      renderGenreList()
+    ) : (
+      <Select options={genres} optionItem={GenreItem} onClick={handleClick} />
+    );
+
+  return renderGenresListOrSelect();
 };
 
 export {GenresList};

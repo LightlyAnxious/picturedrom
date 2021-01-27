@@ -1,0 +1,27 @@
+.enter {
+  max-height: 0;
+}
+
+.enterActive {
+  max-height: 500px;
+  transition: max-height 250ms ease-in-out;
+}
+
+.exit {
+  max-height: 500px;
+}
+
+.exitActive {
+  max-height: 0;
+  transition: max-height 250ms ease-in-out;
+}
+
+@keyframes dropdown {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: unset;
+  }
+}
