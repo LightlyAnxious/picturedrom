@@ -16,6 +16,12 @@ const RATINGS = {
   AWESOME: 'Awesome',
 };
 
+const WindowSize = {
+  MOBILE: 575,
+  TABLET: 767,
+  DESKTOP: 1139,
+};
+
 const RunTimeFormat = {
   PLAYER: 'H:mm:ss',
   HOUR: 'H',
@@ -57,6 +63,7 @@ const TimeUnit = {
 export {
   TimeUnit,
   RunTimeFormat,
+  WindowSize,
   VISIBLE_SIMILAR,
   VISIBLE_ON_START,
   VISIBLE_FILMS_COUNT,
