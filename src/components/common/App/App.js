@@ -10,11 +10,16 @@ import Main from 'components/pages/Main';
 import PrivateRoute from 'components/common/PrivateRoute';
 import SignIn from 'components/pages/SignIn';
 import MyList from 'components/pages/MyList';
+import MoviePage from 'components/pages/MoviePage';
 import CinemaPlayer from 'components/pages/CinemaPlayer';
-import ErrorPage from 'components/common/ErrorPage';
+import CardControls from 'components/common/CardControls';
+import ErrorPage from 'components/pages/ErrorPage';
 
 const App = () => {
   const dispatch = useDispatch();
+  const renderControls = (isFull, film) => (
+    <CardControls isFull={isFull} film={film} />
+  );
 
   // /** Init app config settings  */
   useEffect(() => {
@@ -38,6 +43,15 @@ const App = () => {
           redirectPath="/login"
           render={() => <MyList />}
         />
+        <Route exact path="/films/:id">
+          <MoviePage renderControls={renderControls} />
+        </Route>
+        {/* <PrivateRoute
+          exact
+          path="/films/:id/review"
+          redirectPath="/login"
+          render={() => <AddReview />}
+        /> */}
         <Route exact path="/player/:id">
           <CinemaPlayer />
         </Route>
