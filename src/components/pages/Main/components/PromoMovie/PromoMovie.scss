@@ -110,11 +110,11 @@
   font-size: 32px;
   font-weight: bold;
   line-height: 45px;
-  margin: 0 0 7px;
+  margin: 0 0 15px;
 }
 
 .movie-card__meta {
-  margin: 0 0 20px;
+  margin: 0 0 35px;
   display: flex;
   font-size: 20px;
   line-height: 20px;
@@ -230,6 +230,20 @@
   .movie-card__desc {
     flex-grow: unset;
     width: 55%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .movie-card__poster {
+    margin-bottom: 20px;
+  }
+
+  .movie-card__title {
+    margin: 0 0 10px;
+  }
+
+  .movie-card__meta {
+    margin: 0 0 20px;
   }
 }
 

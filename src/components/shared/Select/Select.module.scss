@@ -7,7 +7,7 @@
   align-items: center;
   width: 40vw;
   min-width: 180px;
-  padding: 10px 0;
+  padding: 0;
   box-sizing: border-box;
   overflow: hidden;
   border: 1px solid var(--controlColor);
@@ -46,6 +46,7 @@
   display: block;
   width: 100%;
   color: inherit;
+  padding: 10px 0;
   text-align: center;
 }
 

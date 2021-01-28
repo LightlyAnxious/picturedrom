@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageFooter from 'components/common/PageFooter';
-import PageHeader from '../PageHeader/PageHeader';
+import PageHeader from 'components/common/PageHeader/PageHeader';
 
 const ErrorPage = () => {
   const errorStyle = {

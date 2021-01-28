@@ -145,7 +145,7 @@
 @media (max-width: $small-mobile-width) {
   .catalog__movies-list {
     display: grid;
-    max-width: 280px;
+    max-width: 320px;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
