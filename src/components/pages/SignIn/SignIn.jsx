@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import {redirectToRoute, login} from 'features/user';
 import PageFooter from 'components/common/PageFooter';
 import PageHeader from 'components/common/PageHeader';
+import UserPage from 'components/common/UserPage';
 
 import './SignIn.scss';
 
@@ -30,7 +31,7 @@ const SignIn = () => {
   };
   /* eslint-disable */
   return (
-    <div className="user-page main-container">
+    <UserPage>
       <PageHeader>
         <h1 className="page-title user-page__title">Sign in</h1>
       </PageHeader>
@@ -78,7 +79,7 @@ const SignIn = () => {
       </div>
 
       <PageFooter />
-    </div>
+    </UserPage>
   );
 };
 /* eslint-enable */

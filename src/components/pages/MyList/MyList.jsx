@@ -6,7 +6,8 @@ import {fetchFavorite, selectFavorite} from 'features/cinema';
 
 import MovieList from 'components/common/MovieList';
 import PageFooter from 'components/common/PageFooter';
-import PageHeader from '../PageHeader/PageHeader';
+import PageHeader from 'components/common/PageHeader/PageHeader';
+import UserPage from 'components/common/UserPage';
 
 import './MyList.scss';
 
@@ -25,7 +26,7 @@ const MyList = () => {
   }, [dispatch]);
 
   return (
-    <div className="user-page">
+    <UserPage>
       <PageHeader>
         <h1 className="page-title user-page__title">My list</h1>
       </PageHeader>
@@ -40,7 +41,7 @@ const MyList = () => {
       </section>
 
       <PageFooter />
-    </div>
+    </UserPage>
   );
 };
 

@@ -9,7 +9,7 @@ import browserHistory from 'services/browser-history';
 import Main from 'components/pages/Main';
 import PrivateRoute from 'components/common/PrivateRoute';
 import SignIn from 'components/pages/SignIn';
-import MyList from 'components/common/MyList';
+import MyList from 'components/pages/MyList';
 import CinemaPlayer from 'components/pages/CinemaPlayer';
 import ErrorPage from 'components/common/ErrorPage';
 
