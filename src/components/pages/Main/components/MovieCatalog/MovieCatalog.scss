@@ -1,4 +1,5 @@
 @import 'styles/screens.scss';
+@import 'styles/mixins.scss';
 
 .catalog {
   margin-bottom: 115px;
@@ -104,6 +105,8 @@
 }
 
 .catalog__button {
+  @include school;
+
   display: block;
   width: 100%;
   padding: 29px 40px;
@@ -131,5 +134,22 @@
 
   .catalog__genres-list {
     justify-content: flex-start;
+  }
+
+  .movies-list__select {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .catalog__movies-list {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .catalog__movies-card {
+    width: auto;
+    margin: 0;
   }
 }

@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 import filmPropTypes from 'proptypes/film.prop';
 import {AuthorizationStatus} from 'utils/const';
 import {selectAuthStatus} from 'features/user';
-import {selectFavorite} from 'features/cinema';
 import withState from 'hocs/withCardControlsState';
 
 import {ReactComponent as PlayIcon} from 'assets/icons/play-button.svg';
@@ -15,11 +14,10 @@ import {ReactComponent as InListIcon} from 'assets/icons/in-list.svg';
 import './CardControls.scss';
 
 const CardControls = props => {
-  const {film, isFull, onPlayRedirect, onMyListClick} = props;
+  const {film, isFull, onPlayRedirect, onMyListClick, isFavorite} = props;
   const isAuth =
     useSelector(selectAuthStatus, shallowEqual) ===
     AuthorizationStatus.AUTHORIZED;
-  const isFavorite = useSelector(selectFavorite, shallowEqual).length !== 0;
   const {id} = film;
 
   return (
@@ -53,6 +51,7 @@ const CardControls = props => {
 CardControls.propTypes = {
   isFull: PropTypes.bool.isRequired,
   film: filmPropTypes,
+  isFavorite: PropTypes.bool.isRequired,
   onMyListClick: PropTypes.func.isRequired,
   onPlayRedirect: PropTypes.func.isRequired,
 };
