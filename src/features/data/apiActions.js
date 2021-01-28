@@ -9,7 +9,7 @@ const fetchPromoMovie = () => (dispatch, _getState, api) =>
     dispatch(loadPromo(promoMovie));
   });
 
-const fetchMovies = () => (dispatch, _getState, api) =>
+const fetchMovies = () => (dispatch, _getState, api) => {
   api.get(ApiRoute.FILMS).then(({data}) => {
     const preparedFilms = data.reduce(
       (films, film) => films.concat(snakeToCamelObjAdapter(film)),
@@ -19,5 +19,6 @@ const fetchMovies = () => (dispatch, _getState, api) =>
     dispatch(getGenres(preparedFilms));
     dispatch(loadFilms(preparedFilms));
   });
+};
 
 export {fetchMovies, fetchPromoMovie};

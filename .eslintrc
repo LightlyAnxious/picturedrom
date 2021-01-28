@@ -50,7 +50,8 @@
         "allowThis": true,
         "exceptions": [{"property": "propTypes"}, {"property": "defaultProps"}, {"property": "current"}]
       }
-    ]
+    ],
+    "jsx-a11y/label-has-for": 0
   },
   "plugins": ["prettier", "fp"],
   "settings": {

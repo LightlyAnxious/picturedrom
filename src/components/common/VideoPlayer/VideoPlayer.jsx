@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import './VideoPlayer.scss';
+
 const VideoPlayer = props => {
   const {name, previewImage, previewVideoLink, isPlaying} = props;
 

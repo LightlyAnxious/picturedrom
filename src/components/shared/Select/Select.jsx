@@ -30,7 +30,6 @@ const Select = ({
       (option, index) => option !== current
     );
     setAvailable(optionsWithoutCurrent);
-    console.log(current);
   }, [current]);
   /* eslint-enable */
 

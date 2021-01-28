@@ -1,0 +1,7 @@
+@import 'styles/screens.scss';
+
+@media (max-width: $small-mobile-width) {
+  .catalog {
+    padding-top: 30px;
+  }
+}

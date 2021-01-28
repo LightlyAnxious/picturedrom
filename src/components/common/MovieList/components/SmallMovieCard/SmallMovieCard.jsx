@@ -15,7 +15,7 @@ import VideoPlayer from 'components/common/VideoPlayer';
 import './SmallMovieCard.scss';
 
 const SmallMovieCard = props => {
-  const {film, isActive, onActiveToggle, onClickSetCurrent} = props;
+  const {film, isActive, onActiveToggle} = props;
   const dispatch = useDispatch();
   let toSetActiveTimer = null;
 
@@ -41,7 +41,6 @@ const SmallMovieCard = props => {
 
   const handleClick = () => {
     const targetPath = `${AppRoute.FILMS}${id}`;
-    onClickSetCurrent(film);
     dispatch(setCurrentFilm(film));
 
     pushToHistory(browserHistory, targetPath);
@@ -80,7 +79,6 @@ SmallMovieCard.propTypes = {
   film: filmProptypes,
   isActive: PropTypes.bool.isRequired,
   onActiveToggle: PropTypes.func.isRequired,
-  onClickSetCurrent: PropTypes.func,
 };
 
 export {SmallMovieCard};
