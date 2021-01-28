@@ -49,7 +49,12 @@ const GenresList = () => {
     !isMobile ? (
       renderGenreList()
     ) : (
-      <Select options={genres} optionItem={GenreItem} onClick={handleClick} />
+      <Select
+        classes="movies-list__select"
+        options={genres}
+        optionItem={GenreItem}
+        onClick={handleClick}
+      />
     );
 
   return renderGenresListOrSelect();

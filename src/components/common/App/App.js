@@ -3,7 +3,7 @@ import {useDispatch} from 'react-redux';
 import {Router, Route, Switch} from 'react-router-dom';
 
 import {checkAuthAsync} from 'features/user';
-import browserHistory from 'utils/browser-history';
+import browserHistory from 'services/browser-history';
 
 import Main from 'components/pages/Main';
 

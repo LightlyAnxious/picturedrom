@@ -4,8 +4,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import {fetchMovies, getFilteredFilms} from 'features/data';
 import {selectVisible} from 'features/cinema';
 
-// import MovieList from '../movie-list/movie-list';
-// import ShowMore from '../show-more/show-more';
+import MovieList from 'components/common/MovieList';
+import ShowMore from './components/ShowMore';
 import GenresList from './components/GenresList';
 
 import './MovieCatalog.scss';
@@ -17,13 +17,13 @@ const MovieCatalog = () => {
   const visibleFilms =
     visible >= films.length ? films : films.slice(0, visible);
 
-  useEffect(() => dispatch(fetchMovies()), []);
+  useEffect(() => dispatch(fetchMovies()), [dispatch]);
 
   return (
     <>
       <GenresList />
-      {/* <MovieList films={visibleFilms} />
-      {visible < films.length ? <ShowMore /> : null} */}
+      <MovieList films={visibleFilms} />
+      {visible < films.length ? <ShowMore /> : null}
     </>
   );
 };

@@ -9,7 +9,7 @@ import {
   selectCurrentFilm,
 } from 'features/cinema';
 import {AuthorizationStatus, AppRoute} from 'utils/const';
-import browserHistory from 'utils/browser-history';
+import browserHistory from 'services/browser-history';
 import {pushToHistory} from 'utils/common';
 import filmPropTypes from '../proptypes/film.prop';
 
@@ -32,13 +32,14 @@ const withCardControlsState = Component => props => {
   }
 
   const {isFavorite = false} = film;
+
   const handlePlayBtn = path => {
     pushToHistory(browserHistory, `${AppRoute.PLAYER}${path}`);
   };
 
   const handleMyListBtn = () =>
     isAuth
-      ? handleFavorite(film, Number(!isFavorite))
+      ? handleFavorite(Number(!isFavorite))
       : pushToHistory(browserHistory, AppRoute.MY_LIST);
 
   return (
