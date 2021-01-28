@@ -22,4 +22,5 @@ export {
   selectGenres,
   selectFavorite,
   selectVisible,
+  selectReviews,
 } from './selectors';
