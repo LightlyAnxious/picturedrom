@@ -82,6 +82,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   align-items: flex-start;
   margin-bottom: 60px;
 }
@@ -144,6 +145,7 @@
 @media (max-width: $small-mobile-width) {
   .catalog__movies-list {
     display: grid;
+    max-width: 280px;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }

@@ -23,7 +23,7 @@
 .logo__link[href]:hover,
 .logo__link[href]:focus {
   border-color: rgba(84, 80, 62, 0.36);
-  color: #54503e;
+  opacity: 0.6;
 }
 .logo__link--light {
   border: 1px solid rgba(84, 80, 62, 0.36);
@@ -41,10 +41,6 @@
   width: 50px;
   height: 50px;
   transition: all 0.25s ease-in;
-
-  &:hover[href] {
-    fill: var(--titleHoverColor);
-  }
 }
 
 @media (max-width: $small-mobile-width) {
@@ -52,6 +48,19 @@
     width: 120px;
     height: 40px;
     font-size: 23px;
+  }
+
+  .user-page {
+    & .page-header {
+      & .logo__link {
+        width: 40px;
+        height: 40px;
+      }
+
+      & .logo__brand {
+        display: none;
+      }
+    }
   }
 
   .logo__picture {

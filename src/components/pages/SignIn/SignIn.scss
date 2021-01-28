@@ -1,0 +1,210 @@
+@import 'styles/screens.scss';
+@import 'styles/mixins.scss';
+
+.user-page {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#170202),
+    to(#0c0101)
+  );
+  background-image: linear-gradient(-180deg, #170202 0%, #0c0101 100%);
+  color: #c9b37e;
+  padding: 15px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-page__head {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.user-page__content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.user-page__title {
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sign-in {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 165px;
+}
+
+.sign-in__form {
+  margin-bottom: 37px;
+}
+
+.sign-in__fields {
+  margin-bottom: 23px;
+}
+
+.sign-in__field {
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.sign-in__field:last-child {
+  margin-bottom: 0;
+}
+
+.sign-in__field--error .sign-in__input,
+.sign-in__field--error .sign-in__input:focus {
+  border-color: #a8421e;
+}
+
+.sign-in__field--error .sign-in__error-message {
+  display: block;
+}
+
+/* stylelint-disable */
+.sign-in__input {
+  @include school;
+
+  display: block;
+  width: 100%;
+  background: #2b1b1b;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  font-size: 30px;
+  color: #dfcf77;
+  line-height: 44px;
+  font-weight: 300;
+  padding: 25px 20px;
+  transition: border-color 0.2s;
+}
+
+.sign-in__input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(223, 207, 119, 0.27);
+}
+
+.sign-in__input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(223, 207, 119, 0.27);
+}
+
+.sign-in__input::-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(223, 207, 119, 0.27);
+}
+
+.sign-in__input::placeholder {
+  opacity: 1;
+  color: rgba(223, 207, 119, 0.27);
+}
+
+.sign-in__input:focus {
+  border-color: #dfcf77;
+}
+/* stylelint-enable */
+
+.sign-in__btn {
+  @include school;
+
+  display: block;
+  width: 100%;
+  padding: 24px 40px;
+  background: none;
+  border: 1px solid rgba(217, 205, 141, 0.41);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+  color: #d9cd8d;
+  cursor: pointer;
+}
+
+.sign-in__btn:hover,
+.sign-in__btn:focus {
+  border: 1px solid rgba(217, 205, 141, 0.7);
+}
+
+.sign-in__reset-password {
+  text-align: center;
+}
+
+.sign-in__link {
+  font-size: 22px;
+  line-height: 26px;
+  color: #574427;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sign-in__link:hover,
+.sign-in__link:focus {
+  color: #dfcf77;
+}
+
+.sign-in__message {
+  text-align: center;
+  font-size: 22px;
+  color: #dfcf77;
+  line-height: 26px;
+  margin-bottom: 42px;
+}
+
+.sign-in__message p {
+  margin: 0;
+}
+
+/*stylelint-disable */
+.sign-in__error-message {
+  font-size: 22px;
+  line-height: 26px;
+  color: #a8421e;
+  position: absolute;
+  z-index: 1;
+  left: calc(100% + 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+}
+
+@media (max-width: $tablet-width) {
+  .sign-in__input {
+    padding: 20px 20px;
+    font-size: 25px;
+  }
+
+  .sign-in__btn {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .sign-in {
+    padding-bottom: 80px;
+  }
+
+  .sign-in__btn,
+  .sign-in__input {
+    padding: 15px 20px;
+  }
+
+  .user-page__title {
+    right: unset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
